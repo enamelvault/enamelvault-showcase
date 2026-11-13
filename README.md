@@ -10,9 +10,7 @@ with one design system and one sign-in.
 Built by Aayush Pokhrel · Operated by Enamel Vault LLC ·
 [GitHub](https://github.com/aayushpokhrel1)
 
-<!-- DEMO GIF: uncomment once screenshots/demo.gif exists
-![Importing a recipe from a photo, then cooking from it](screenshots/demo.gif)
--->
+![Opening a family recipe and cooking from it step by step in Cook Mode](screenshots/demo.gif)
 
 ## What it is
 
@@ -39,11 +37,11 @@ kept, it is trialled at one site, and one version is signed off for the menu.
 - Cook from Cook Mode: one step at a time in big text, with the screen kept awake and the
   amounts for that step already scaled.
 
-<!-- FAMILY SCREENSHOTS: uncomment once the files exist
-![A recipe with its photo, story and ingredients](screenshots/family-recipe.png)
-![The week's meal plan](screenshots/family-plan.png)
-![The grocery list, grouped by aisle](screenshots/family-grocery.png)
--->
+![A family recipe with its ingredients and steps](screenshots/family-recipe.png)
+
+![The week's grocery list, grouped by aisle and naming the recipe each line is for](screenshots/family-grocery.png)
+
+![Cook Mode: one step at a time in large text](screenshots/family-cook.png)
 
 ## The kitchen app
 
@@ -54,10 +52,9 @@ kept, it is trialled at one site, and one version is signed off for the menu.
 - Give cooks, chefs and owners different powers, enforced by the database rather than by
   hiding buttons.
 
-<!-- KITCHEN SCREENSHOTS: uncomment once the files exist
-![A dish moving through development, trial and sign-off](screenshots/kitchen-pipeline.png)
-![The group's numbers](screenshots/kitchen-numbers.png)
--->
+![A kitchen's dishes, each at its stage: in development, on trial, on the menu](screenshots/kitchen-dishes.png)
+
+![One dish: the version the sites are cooking, and its history](screenshots/kitchen-dish.png)
 
 ## How it's built
 
