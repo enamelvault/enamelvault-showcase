@@ -28,7 +28,15 @@ for path in sorted(ROOT.rglob("*")):
     if path.suffix not in (".md", ".svg") or ".git" in path.parts:
         continue
     rel = path.relative_to(ROOT)
+    in_comment = False
     for n, line in enumerate(path.read_text(encoding="utf-8").splitlines(), 1):
+        # Links inside an HTML comment are placeholders for files not made yet: dashes,
+        # the project ref and the surname are still checked there, links are not.
+        if "<!--" in line:
+            in_comment = True
+        commented = in_comment
+        if "-->" in line:
+            in_comment = False
         for d in DASHES:
             if d in line:
                 problems.append(f"{rel}:{n}: dash {d!r}")
@@ -37,7 +45,7 @@ for path in sorted(ROOT.rglob("*")):
                 problems.append(f"{rel}:{n}: forbidden string {f!r}")
         if SURNAME in line:
             surname_hits.append((rel, n, line))
-        for m in LINK.finditer(line):
+        for m in ([] if commented else LINK.finditer(line)):
             target = (m.group(1) or m.group(2)).split("#")[0]
             if not target or re.match(r"[a-z]+:", target):
                 continue  # in-page anchor, or an absolute URL / mailto
