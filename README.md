@@ -71,8 +71,6 @@ kept, it is trialled at one site, and one version is signed off for the menu.
 - **Tests:** about 1,700 unit tests and over 300 integration tests that run against a real
   database as ordinary users, so a security rule is tested by trying to break it.
 
-![Architecture: three web apps and a phone app over a Cloudflare Worker and Supabase](docs/architecture.svg)
-
 ## Case studies
 
 Short write-ups of problems I found and fixed, and what stops each one coming back.
